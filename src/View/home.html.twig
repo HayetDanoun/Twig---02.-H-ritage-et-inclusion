@@ -1,0 +1,21 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}
+    {{ parent() }} -Accueil
+{% endblock %}
+
+{% block content %}
+    <h1>Hello {{name }}</h1>
+    {% include 'navbar.html.twig' %} 
+{% endblock %}
+
+{% block pasDemander %}
+       <h1> Voici la liste de tes animaux </h1>
+    <ul>
+    {%for animal in animals %}
+       <li> {{ animal }} </li>
+    {% endfor %}
+     {{ dump([animals])}}
+    </ul>
+{% endblock %}
+
